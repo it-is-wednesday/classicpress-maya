@@ -1,0 +1,103 @@
+/* ----------------- */
+/* --- SITE WIDE --- */
+/* ----------------- */
+
+:root {
+  --page-padding: 14px;
+  --small-title-color: #588157;
+  --large-title-color: #3a5a40;
+  --bg: #dad7cd;
+}
+
+html {
+  /* for mobile */
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+  background: url("assets/bg.webp");
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* rules for computer screens */
+@media (min-width: 600px) {
+  body {
+    max-width: 40rem;
+  }
+}
+
+/* ------------------ */
+/* --- FRONT PAGE --- */
+/* ------------------ */
+
+.front-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.front-page-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  font-size: 3rem;
+}
+
+.front-page-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.front-page-menu-item-star {
+  font-size: 6rem;
+}
+
+.front-page img {
+  width: 80%;
+}
+
+/* ------------------------ */
+/* --- SINGLE POST PAGE --- */
+/* ------------------------ */
+
+.modern-footnotes-footnote__note {
+  line-height: 1rem;
+}
+
+.post-page {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.post-page p {
+  line-height: 2rem;
+}
+
+.post-page h1 {
+  color: var(--small-title-color);
+}
+
+.post-page-post-title {
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* ------------------- */
+/* --- SITE HEADER --- */
+/* ------------------- */
+
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-header a {
+  color: var(--large-title-color);
+  text-decoration: none;
+  font-size: 10rem;
+}
