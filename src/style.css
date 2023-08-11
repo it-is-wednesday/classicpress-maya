@@ -42,7 +42,6 @@ body {
 .front-page-menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 80%;
   font-size: 3rem;
 }
 
@@ -58,10 +57,6 @@ body {
 
 .front-page img {
   width: 80%;
-}
-
-.site-header img {
-  width: 100%;
 }
 
 
@@ -107,4 +102,22 @@ body {
   font-size: 10rem;
   display: flex;
   justify-content: center;
+}
+
+
+.site-header img {
+  width: 100%;
+}
+
+/* --------------- */
+/* --- GALLERY --- */
+/* --------------- */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery img {
+  width: 100%;
 }

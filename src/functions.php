@@ -1,4 +1,23 @@
 <?php
+function my_register($slug, $icon)
+{
+    register_post_type($slug, [
+        "labels" => ["menu_name" => ucfirst($slug)],
+        "has_archive" => true,
+        "public" => true,
+        "supports" => ["title", "thumbnail"],
+        "menu_icon" => $icon,
+        "rewrite" => ["with_front" => false],
+    ]);
+}
+
+add_action("init", function () {
+    my_register("art", "dashicons-admin-customizer");
+    my_register("tattoos", "dashicons-star-empty");
+    my_register("photography", "dashicons-camera-alt");
+    my_register("flashim", "dashicons-plugins-checked");
+});
+
 add_action("admin_init", function () {
     remove_menu_page("edit.php");
     remove_menu_page("plugins.php");
@@ -8,6 +27,21 @@ add_action("admin_init", function () {
 add_action("after_setup_theme", function () {
     add_theme_support("post-thumbnails");
 });
+
+// cool numeric post links
+add_filter(
+    "post_type_link",
+    function ($post_link, $post = 0) {
+        $type = $post->post_type;
+        if ($type === "makeup" || $type == "tattoos") {
+            return home_url("{$type}/" . $post->ID . "/");
+        } else {
+            return $post_link;
+        }
+    },
+    1,
+    3
+);
 
 // display featured image in post list
 add_filter("manage_posts_columns", function ($columns) {

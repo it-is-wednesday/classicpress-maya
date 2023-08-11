@@ -33,4 +33,4 @@ download-classicpress:
 
 watch:
     docker start {{CONTAINER_NAME}}
-    cd {{CP_PATH}} && {{PHP_EXEC}} -S localhost:51690
+    cd {{CP_PATH}} && {{PHP_EXEC}} -S 0.0.0.0:51690
