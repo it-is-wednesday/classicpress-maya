@@ -16,7 +16,7 @@ shuffle($star_colors)
             <a href="<?= '/index.php/' . $slug ?>" class="front-page-menu-item">
                 <img src="<?= get_theme_file_uri('assets/stars/' . $count . '.webp') ?>"
                      class="front-page-menu-item-star"/>
-                <div class="front-page-menu-item-text"><?= ucfirst($slug) ?></div>
+                <div class="front-page-menu-item-text"><?= $slug ?></div>
             </a>
         <?php endforeach; ?>
     </div>

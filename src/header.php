@@ -10,7 +10,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body dir="rtl">
+<body>
     <div class="site-header">
         <a href="/">
             <img src="<?= get_theme_file_uri('assets/logo.webp') ?>" />

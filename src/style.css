@@ -14,7 +14,7 @@ html {
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
   background: url("assets/bg.webp");
-  font-family: Arial, sans-serif;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 body {
@@ -42,7 +42,6 @@ body {
 .front-page-menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  font-size: 3rem;
 }
 
 .front-page-menu-item {
@@ -55,10 +54,13 @@ body {
   font-size: 6rem;
 }
 
+.front-page-menu-item-text {
+  font-size: 1.5rem;
+}
+
 .front-page img {
   width: 80%;
 }
-
 
 /* ------------------------ */
 /* --- SINGLE POST PAGE --- */
@@ -104,7 +106,6 @@ body {
   justify-content: center;
 }
 
-
 .site-header img {
   width: 100%;
 }
@@ -116,6 +117,9 @@ body {
 .gallery {
   display: flex;
   flex-direction: column;
+  padding: 10%;
+  background: white;
+  gap: 2vh;
 }
 
 .gallery img {
