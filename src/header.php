@@ -12,5 +12,7 @@
 
 <body dir="rtl">
     <div class="site-header">
-        <a href="/">מאיה</a>
+        <a href="/">
+            <img src="<?= get_theme_file_uri('assets/logo.webp') ?>" />
+        </a>
     </div>
